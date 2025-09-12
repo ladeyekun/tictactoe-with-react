@@ -10,9 +10,8 @@ export type SquareButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & PropsW
     value: Player;
     onClick: () => void;
 }>;
-
+*/
 export  interface SquareButtonStyledProps {
     $value?: Player;
     $onClick?: () => void;
 }
-*/

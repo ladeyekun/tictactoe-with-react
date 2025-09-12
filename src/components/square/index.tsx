@@ -1,10 +1,14 @@
 import { SquareButtonProps } from "./types";
+import * as S from "./styles";
 
 const Square = ({ value, onClick }: SquareButtonProps) => {
   return (
-    <button onClick={onClick} disabled={!!value}>
+    // <button onClick={onClick} disabled={!!value}>
+    //   {value}
+    // </button>
+    <S.SquareButton onClick={onClick} disabled={!!value}>
       {value}
-    </button>
+    </S.SquareButton>
   );
 };
 

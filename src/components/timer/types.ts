@@ -1,3 +1,3 @@
 export interface TimerProps {
-    seconds: number;
+    timeLeft: number;
 }

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
-export function useTime(seconds: number, onExpire: () => void) {
+export function useTimer(seconds: number, onExpire: () => void) {
     const [timeLeft, setTimeLeft] = useState(seconds);
 
     useEffect(() => {
@@ -14,5 +14,9 @@ export function useTime(seconds: number, onExpire: () => void) {
         return () => clearTimeout(timerId);
     }, [timeLeft, onExpire]);
 
-    return timeLeft;
+    const reset = useCallback(() => {
+        setTimeLeft(seconds);
+    }, [seconds]);
+
+    return { timeLeft, reset };
 }
