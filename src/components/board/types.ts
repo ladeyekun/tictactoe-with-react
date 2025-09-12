@@ -1,13 +1,6 @@
-import { ButtonHTMLAttributes, PropsWithChildren } from "react";
-import Square from "../square";
 import { Squares } from "../../types";
 
-export type BoardProps = ButtonHTMLAttributes<HTMLButtonElement> & PropsWithChildren <{
+export interface BoardProps {
     squares: Squares;
     onClick: (i: number) => void;
-}>;
-
-export  interface BoardStyledProps {
-    $squares?: Squares;
-    $onClick?: (i: number) => void;
 }

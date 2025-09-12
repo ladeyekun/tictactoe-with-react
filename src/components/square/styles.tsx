@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { SquareButtonStyledProps } from "./types";
 
-export const SquareButton = styled.button<SquareButtonStyledProps>`
+export const SquareButton = styled.button`
   width: 100px;
   height: 100px;
   background-color: #fff;
