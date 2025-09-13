@@ -3,6 +3,7 @@ import { Player } from "../../types";
 export interface SquareButtonProps {
     value: Player;
     onClick: () => void;
+    isWinning?: boolean;
 }
 
 /*
@@ -14,4 +15,5 @@ export type SquareButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & PropsW
 export  interface SquareButtonStyledProps {
     $value?: Player;
     $onClick?: () => void;
+    $isWinning?: boolean;
 }
